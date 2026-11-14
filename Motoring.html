@@ -52,6 +52,13 @@
       color: var(--muted);
     }
 
+    .channel-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+      flex-shrink: 0;
+    }
+
     .channel-link {
       display: block;
       flex-shrink: 0;
@@ -130,10 +137,14 @@
 
     @media (max-width: 900px) {
       main { padding: 0 2rem 4rem; }
+      #banner { max-width: 45%; }
+      .channel-link img { height: 34px; }
     }
 
     @media (max-width: 600px) {
       main { padding: 0 1rem 3rem; }
+      #banner { max-width: 65%; }
+      .channel-link img { height: 30px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -148,9 +159,14 @@
 <main>
   <div class="label-row">
     <p class="gallery-label">Motoring</p>
-    <a class="channel-link" href="https://www.youtube.com/@verysmallfeet" target="_blank" rel="noopener noreferrer">
-      <img src="https://raw.githubusercontent.com/klatasa/VerySmallFeet/refs/heads/main/images/YTLink.jpg" alt="@verysmallfeet on YouTube" width="150" height="48">
-    </a>
+    <div class="channel-links">
+      <a class="channel-link" href="https://www.youtube.com/@verysmallfeet" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/klatasa/VerySmallFeet/refs/heads/main/images/YTLink.jpg" alt="@verysmallfeet on YouTube" width="150" height="48">
+      </a>
+      <a class="channel-link" href="https://pixelfed.social/verysmallfeet" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/klatasa/VerySmallFeet/refs/heads/main/images/PFLink.jpg" alt="@verysmallfeet on Pixelfed" width="150" height="48">
+      </a>
+    </div>
   </div>
   <div id="gallery"></div>
 </main>
